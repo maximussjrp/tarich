@@ -146,12 +146,76 @@ input:focus, textarea:focus{border-color: rgba(15,42,74,.55);box-shadow: 0 0 0 3
   .grid{grid-template-columns:1fr 1fr;}
   .two{grid-template-columns:1fr;}
   .footer__grid{grid-template-columns:1fr 1fr;}
+  .section__head{flex-direction:column;align-items:flex-start;gap:8px;}
 }
+
+@media (max-width: 768px){
+  /* Topbar */
+  .topbar__inner{flex-direction:column;align-items:flex-start;gap:10px;padding:12px 0;}
+  .topbar__contacts{flex-direction:column;align-items:flex-start;gap:6px;}
+  .sep{display:none;}
+  
+  /* Banner */
+  .banner{height:120px;}
+  .banner img{height:200px;}
+  
+  /* Footer */
+  .footer__grid{grid-template-columns:1fr;gap:20px;}
+  .footer__copy{margin-top:10px;}
+}
+
 @media (max-width: 640px){
-  h1{font-size:34px;}
+  /* Typography */
+  h1{font-size:28px;}
+  h2{font-size:22px;}
+  .lead{font-size:16px;}
+  
+  /* Navigation */
+  .nav__inner{flex-wrap:wrap;}
+  .nav__toggle{display:inline-flex;}
+  .nav__menu{
+    display:none;
+    width:100%;
+    padding:12px 0;
+    flex-direction:column;
+    align-items:stretch;
+    gap:8px;
+    border-top:1px solid var(--line);
+    margin-top:10px;
+  }
+  .nav__menu.open{display:flex;}
+  .nav__menu li{width:100%;}
+  .nav__menu a{display:block;padding:10px 0;}
+  .nav__menu .btn{text-align:center;}
+  
+  /* Hero */
+  .hero__grid{padding:24px 0;}
+  .hero__actions{flex-direction:column;}
+  .hero__actions .btn{width:100%;justify-content:center;}
+  
+  /* Info box */
+  .info{padding:12px;}
+  .info__row{font-size:14px;}
+  
+  /* Panel */
+  .panel{margin-top:16px;}
+  
+  /* Cards grid */
   .row{grid-template-columns:1fr;}
   .grid{grid-template-columns:1fr;}
-  .nav__toggle{display:inline-flex;}
-  .nav__menu{display:none;padding:10px 0;flex-direction:column;align-items:flex-start;gap:10px;}
-  .nav__menu.open{display:flex;}
+  
+  /* Definition list */
+  .dl > div{grid-template-columns:1fr;gap:4px;}
+  
+  /* Form */
+  .actions{flex-direction:column;}
+  .actions .btn{width:100%;justify-content:center;}
+  
+  /* Map */
+  .map iframe{height:250px;}
+  .mapbox .actions{margin-top:12px;}
+  
+  /* Buttons */
+  .btn{padding:14px 16px;font-size:15px;}
+  .btn--small{padding:12px 14px;}
 }
