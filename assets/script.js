@@ -1,6 +1,11 @@
 (() => {
   const $ = (s) => document.querySelector(s);
 
+  const yearEl = $("#currentYear");
+  if (yearEl) {
+    yearEl.textContent = String(new Date().getFullYear());
+  }
+
   const toggle = $("#navToggle");
   const menu = $("#navMenu");
   if (toggle && menu) {
